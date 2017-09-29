@@ -13,11 +13,12 @@ creating ftp with SSL
 9) run <code>sudo service vsftpd restart</code>
 
 open ports for ftp:
-iptables -A OUTPUT -p tcp --sport 21 -m state --state ESTABLISHED -j ACCEPT
-iptables -A OUTPUT -p tcp --sport 20 -m state --state ESTABLISHED,RELATED -j ACCEPT
-iptables -A OUTPUT -p tcp --sport 1024: --dport 1024: -m state --state ESTABLISHED -j ACCEPT
-iptables -A INPUT -p tcp --dport 21 -m state --state NEW,ESTABLISHED -j ACCEPT
-iptables -A INPUT -p tcp --dport 20 -m state --state ESTABLISHED -j ACCEPT
-iptables -A INPUT -p tcp --sport 1024: --dport 1024: -m state --state ESTABLISHED,RELATED,NEW -j ACCEPT
-
+<ul>
+  <li>iptables -A OUTPUT -p tcp --sport 21 -m state --state ESTABLISHED -j ACCEPT</li>
+  <li>iptables -A OUTPUT -p tcp --sport 20 -m state --state ESTABLISHED,RELATED -j ACCEPT</li>
+  <li>iptables -A OUTPUT -p tcp --sport 1024: --dport 1024: -m state --state ESTABLISHED -j ACCEPT</li>
+  <li>iptables -A INPUT -p tcp --dport 21 -m state --state NEW,ESTABLISHED -j ACCEPT</li></li>
+  <li>iptables -A INPUT -p tcp --dport 20 -m state --state ESTABLISHED -j ACCEPT</li>
+  <li>iptables -A INPUT -p tcp --sport 1024: --dport 1024: -m state --state ESTABLISHED,RELATED,NEW -j ACCEPT</li>
+<ul>
 After that use FTP port 21 and SSL/TLS for connection
