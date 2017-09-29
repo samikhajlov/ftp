@@ -22,4 +22,4 @@ open ports for ftp:
   <li>iptables -A INPUT -p tcp --sport 1024: --dport 1024: -m state --state ESTABLISHED,RELATED,NEW -j ACCEPT</li>
 <ul>
 <br>
-  <b>After that use FTP port 21 and SSL/TLS for connection</b>
+<p><b>After that use FTP port 21 and SSL/TLS for connection</b></p>
