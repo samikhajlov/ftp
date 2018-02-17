@@ -11,6 +11,8 @@ creating ftp with SSL
 7) run <code>sudo chown ftpuser:ftpuser /home/ftpuser/files</code>
 8) run <code>sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem</code>
 9) run <code>sudo service vsftpd restart</code>
+10) etc/vsftpd.conf change to <code>chroot_local_user=YES</code>
+11) <code>usermod --home /var/www/ username</code>
 
 open ports for ftp:
 <ul>
