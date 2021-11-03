@@ -9,7 +9,7 @@ creating ftp with SSL
 5) run <code>sudo chown root:root /home/ftpuser</code>
 6) run <code>sudo mkdir /home/ftpuser/files</code>
 7) run <code>sudo chown ftpuser:ftpuser /home/ftpuser/files</code>
-8) run <code>sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem</code>
+8) run <code>sudo openssl req -x509 -nodes -days 720 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.key -out /etc/ssl/private/vsftpd.pem</code>
 9) run <code>sudo service vsftpd restart</code>
 10) etc/vsftpd.conf change to <code>chroot_local_user=YES</code>
 11) <code>usermod --home /var/www/ username</code>
